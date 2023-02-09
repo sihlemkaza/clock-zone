@@ -1,0 +1,28 @@
+.clock-stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+
+  .timzone-label-container {
+    display: flex;
+    flex-direction: row;
+
+    .icon {
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .date-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
