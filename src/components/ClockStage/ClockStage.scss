@@ -27,9 +27,42 @@
     text-align: center;
     font-size: 24px;
     gap: 8px;
+    width: fit-content;
+    justify-content: center;
   }
 
   .time-value {
     font-size: 96px;
+  }
+
+  @media screen and (max-width: 24rem) {
+    .timzone-label-container .loc-icon {
+      height: 16px;
+      width: 16px;   
+    }
+
+    .timzone-label-container, .date-container {
+      font-size: 18px;
+    }
+
+    .time-value {
+      font-size: 64px;
+    }
+  }
+
+  @media screen and (max-width: 16rem) {
+
+    .timzone-label-container .loc-icon {
+      height: 14px;
+      width: 14px;  
+    }
+
+    .timzone-label-container, .date-container {
+      font-size: 16px;
+    }
+
+    .time-value {
+      font-size: 48px;
+    }
   }
 }
