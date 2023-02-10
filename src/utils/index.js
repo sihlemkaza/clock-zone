@@ -2,17 +2,17 @@ export const getWeekday = (dayNumber) => {
   switch(dayNumber) {
     case 1:
       return 'Monday';
-    case 1:
+    case 2:
       return 'Tuesday';
-    case 1:
+    case 3:
       return 'Wednesday';
-    case 1:
+    case 4:
       return 'Thursday';
-    case 1:
+    case 5:
       return 'Friday';
-    case 1:
+    case 6:
       return 'Saturday';
-    case 1:
+    case 7:
       return 'Sunday';
     default:
       return null;

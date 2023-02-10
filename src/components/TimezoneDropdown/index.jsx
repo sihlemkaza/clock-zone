@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
 import './TimezoneDropdown.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { setTimezone } from '../../redux/features/timezone';
 
 function TimezoneDropdown() {
-  const [timeZones, setTimeZones] = useState([]);
-  const [currentZone, setCurrentZone] = useState('');
+  const dispatch = useDispatch();
+  const timezoneValue = useSelector((state) => state.timezoneReducer.value);
+  const [timezoneList, setTimezoneList] = useState([]);
 
   function handleZone(event) {
-    setCurrentZone(event.target.value);
+    dispatch(setTimezone(event.target.value));
   }
   
   function renderZoneSelect() {
     return <select 
       id='timezone-select'
-      value={currentZone} 
+      value={timezoneValue} 
       onChange={handleZone}>
       {
-        timeZones.map((zoneValue, index) =>(
+        timezoneList.map((zoneValue, index) =>(
           <option value={zoneValue} key={index}>
             {zoneValue}
           </option>
@@ -26,12 +29,8 @@ function TimezoneDropdown() {
   }
 
   useEffect(() => {
-    const tempDT = DateTime.now();
-    const defaultZone = tempDT.zoneName;
-    !currentZone && setCurrentZone(defaultZone);
-
     const tzList = Intl.supportedValuesOf('timeZone');
-    setTimeZones(tzList);
+    setTimezoneList(tzList);
   },[]);
 
   return (
