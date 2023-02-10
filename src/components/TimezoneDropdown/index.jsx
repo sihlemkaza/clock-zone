@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
+import './TimezoneDropdown.scss';
 
 function TimezoneDropdown() {
   const [timeZones, setTimeZones] = useState([]);

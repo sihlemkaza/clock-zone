@@ -6,12 +6,9 @@ import TimezoneDropdown from './components/TimezoneDropdown';
 function App() {
   return (
     <div className="app">
-      <div className='top-nav'>
-        <TimezoneDropdown/>
-        <Theme/>
-      </div>
+      <TimezoneDropdown/>
       <ClockStage/>
-      <div></div>
+      <Theme/>
     </div>
   )
 }
