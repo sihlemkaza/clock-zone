@@ -5,12 +5,11 @@ import './index.css';
 
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import themeReducer from './redux/features/theme';
 import timezoneReducer from './redux/features/timezone';
 
 const store = configureStore({
   reducer: {
-    timezoneReducer, themeReducer
+    timezoneReducer
   }
 });
 

@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  background-color: #F8F8F8;
-  border: 1px solid #E8E8E8;
+  background-color: var(--theme_container_background);
+  border: 1px solid var(--theme_container_border);
   border-radius: 8px;
   padding: 4px;
   width: fit-content;
@@ -12,15 +12,25 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background-color: white;
-    border: 1px solid #CDCDCD;
+    background-color: var(--theme_container_background);
+    border: 1px solid var(--theme_buttons_border);
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
     font-size: 14px;
+    color: var(--text_color);
 
     &:hover {
-      background-color: #E8E8E8;
+      background-color: var(--theme_buttons_hover);
+    }
+
+    
+    &.active {
+      font-weight: 600;
+      background-color: var(--theme_buttons_active);
+      .light-icon, .dark-icon {
+        color: var(--theme_icons_active);
+      }
     }
   }
 }

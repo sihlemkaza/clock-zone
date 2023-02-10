@@ -1,3 +1,30 @@
+:root {
+  --body_background_color: white;
+  --text_color: black;
+  --dropdown_border_color: black;
+  --theme_container_background: #F8F8F8;
+  --theme_container_border: #E8E8E8;
+  --theme_buttons_background: white;
+  --theme_buttons_border: #CDCDCD;
+  --theme_buttons_hover: #E8E8E8;
+  --theme_buttons_active: white;
+  --theme_icons_active: gold;
+}
+
+[data-theme="dark"] {
+  --body_background_color: #121212;
+  --text_color: white;
+  --dropdown_border_color: white;
+  --theme_container_background: #121212;
+  --theme_container_border: #121212;
+  --theme_buttons_background: white;
+  --theme_buttons_border: #CDCDCD;
+  --theme_buttons_hover: black;
+  --theme_buttons_active: #1E1E1E;
+  --theme_icons_active: gold;
+}
+
 body {
   margin: 0;
 }
+
